@@ -1,0 +1,143 @@
+/* CSS para Frey Clima */
+:root {
+  --primary: #005caa;
+  --secondary: #31a5f8;
+  --light: #ffffff;
+  --dark: #222;
+  --font: 'Montserrat', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font);
+  background-color: #f0f4f8;
+  color: var(--dark);
+}
+
+header {
+  background-color: var(--primary);
+  color: var(--light);
+  padding: 1rem 2rem;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 800;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 0.5rem;
+  flex-wrap: wrap;
+}
+
+nav ul li a {
+  color: var(--light);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+nav ul li a:hover {
+  color: var(--secondary);
+}
+
+.hero {
+  background-color: var(--secondary);
+  color: var(--light);
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+}
+
+section {
+  padding: 2rem 1.5rem;
+  max-width: 1000px;
+  margin: auto;
+}
+
+section h2 {
+  color: var(--primary);
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+section p {
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+footer {
+  background-color: var(--primary);
+  color: var(--light);
+  text-align: center;
+  padding: 1.5rem;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .logo {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  nav ul {
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  section {
+    padding: 1.5rem 1rem;
+  }
+
+  section h2 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero h1 {
+    font-size: 1.6rem;
+  }
+
+  .hero p {
+    font-size: 0.95rem;
+  }
+
+  section h2 {
+    font-size: 1.3rem;
+  }
+
+  footer {
+    font-size: 0.8rem;
+  }
+}
