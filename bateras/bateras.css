@@ -152,7 +152,7 @@ nav ul li a.active {
 }
 
 .card-body a:hover {
-  background: #c40810;
+  background: #a07f0a;
 }
 
 /* Rodapé */
@@ -173,7 +173,7 @@ footer {
 
   nav ul {
     flex-direction: column;
-    gap: 0.75rem;
+    gap: 1rem;
   }
 
   .cards-container {
