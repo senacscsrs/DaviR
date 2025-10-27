@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Desafio java</title>
+</head>
+  <script>
+    let colaboradores = [];
+let continuar = true;
+
+while (continuar) {
+  let nome = prompt("Nome do colaborador:");
+  let horas = Number(prompt("Horas trabalhadas:"));
+  let nota = Number(prompt("Nota de avaliação (0 a 10):"));
+  
+  colaboradores.push({ nome, horas, nota });
+  
+  let resposta = prompt("Quer adicionar outro colaborador? (sim/não)").toLowerCase();
+  
+  switch (resposta) {
+    case "sim":
+    case "s":
+      continuar = true;
+      break;
+    case "não":
+    case "nao":
+    case "n":
+      continuar = false;
+      break;
+    default:
+      alert("Resposta inválida, finalizando.");
+      continuar = false;
+  }
+}
+
+let maiorProdutividade = 0;
+let maisProdutivo = "";
+
+for (let i = 0; i < colaboradores.length; i++) {
+  let prod = colaboradores[i].horas * colaboradores[i].nota;
+  
+  if (prod > maiorProdutividade) {
+    maiorProdutividade = prod;
+    maisProdutivo = colaboradores[i].nome;
+  } else if (prod === maiorProdutividade) {
+    // Caso empate, mantém o primeiro encontrado
+  } else {
+    // Não faz nada
+  }
+  alert(`Produtividade de ${colaboradores[i].nome}: ${prod}`);
+}
+
+alert(`Colaborador mais produtivo: ${maisProdutivo}`);
+    </script>
