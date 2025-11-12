@@ -1,26 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Multiple Choice</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz Interativo</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
-   <button id="startGame" class="start">Começar Jogo</button>
+  <main class="quiz-wrapper">
+    <h1 class="title">Quiz Interativo</h1>
 
-<div class="quiz-container" id="quiz-container" style="display:none;">
-  <p id="question"  class="question"></p>
-  <div id="options" class="options"></div>
-  <button id="nextQuestion" style="display:none;" class="nextQuestion">Próxima</button>
-</div>
+    <button id="startGame" class="btn start">Começar Jogo</button>
 
-<p id="score" style="display:none;"></p>
+    <div class="quiz-container" id="quiz-container" style="display:none;">
+      <p id="question" class="question"></p>
+      <div id="options" class="options"></div>
+      <button id="nextQuestion" class="btn nextQuestion" style="display:none;">Próxima</button>
+    </div>
 
-<footer class="footervoltar">
-    <a href="../../index.html#pessoal" class="voltar">Voltar ao Projetos</a>
-</footer> 
+    <p id="score" class="score-text" style="display:none;"></p>
+  </main>
 
+  <footer class="footervoltar">
+    <a href="projetos.html" class="voltar">Voltar aos Projetos</a>
+  </footer>
 </body>
 </html>

@@ -1,12 +1,18 @@
+/* === DADOS DO QUIZ (mantidos) === */
 const allQuestions = [
   {
     question: "Quem atuou como protagonista no filme 'Clube da Luta'?",
-    options: ["Veigh", "Morgan Freeman", "George Washington", "Brad Pitt"],
+    options: ["Morgan Freeman", "Virginia", "Donald Trup", "Brad Pitt"],
     correctOption: 3
   },
   {
-    question: "Qual dos alimentos a seguir são tóxicos para o corpo?",
-    options: ["Suco de Laranja", "Mola retirada de um trator John Deere", "Água Sanitária", "Tijolo (Vermelho)"],
+    question: "Quem escreveu a música 'Talvez você precise de mim'?",
+    options: ["Veigh", "Tupac", "Quenia Oeste", "J. Eskine"],
+    correctOption: 0
+  },
+  {
+    question: "Qual dos alimentos a seguir é tóxico para o corpo?",
+    options: ["Suco de Laranja", "Mola retirada de um trator Jhon Deer", "Água Sanitária", "Tijolo"],
     correctOption: 2
   },
   {
@@ -16,17 +22,42 @@ const allQuestions = [
   },
   {
     question: "Quem escreveu 'Romeu e Julieta'?",
-    options: ["Rony (do Palmeiras)", "William Shakespeare", "Barack Obama", "Machado de Assis"],
-    correctOption: 1
-  },
-  {
-    question: "Qual o maior planeta do sistema solar?",
-    options: ["Júpiter", "O Sol", "Lua", "Gordão da XJ"],
+    options: ["Rony (do Palmeiras)", "William Shakespeare", "Luva de Pedreiro", "Jon Vlogs"],
     correctOption: 0
   },
   {
+    question: "Qual o maior planeta do sistema solar?",
+    options: ["Maumauzk", "Thais Carla", "Duzão - é +", "Gordão da XJ"],
+    correctOption: 2
+  },
+  {
     question: "Com quantos anos o Pelé morreu?",
-    options: ["4", "82", "não sei", "97"],
+    options: ["4", "82", "Não sei", "ELE MORREU?"],
+    correctOption: 3
+  },
+  {
+    question: "Onde foi feito o muro de Berlim?",
+    options: ["Belem do Pará", "Xique-Xique na Bahia", "Anta Gorda", "Não-Me-Toque", "Berlim"],
+    correctOption: 4
+  },
+  {
+    question: "Qual dos elementos a seguir é enssencial para rodar um carro?",
+    options: ["Moster Branco", "Agua", "Gasolina", "Mijo de Camelo"],
+    correctOption: 3
+  },
+  {
+    question: "Quem pintou a Mona Lisa?",
+    options: ["Vinicius Jr", "Mbappe", "Welligton Rato", "Neymar Jr"],
+    correctOption: 2
+  },
+  {
+    question: "Qual é o maior Podcast do Brasil?",
+    options: ["PodPah", "PodPWO"],
+    correctOption: 1
+  },
+  {
+    question: "Qual é a capital da França?",
+    options: ["Berlim", "Santa Cruz da Paraiba", "Parecida do Norte", "Paris"],
     correctOption: 1
   },
 ];
@@ -34,6 +65,7 @@ const allQuestions = [
 let currentQuestionIndex = 0;
 let score = 0;
 
+/* === ELEMENTOS DOM === */
 const startButton = document.getElementById('startGame');
 const quizContainer = document.getElementById('quiz-container');
 const questionElement = document.getElementById('question');
@@ -44,6 +76,7 @@ const scoreDisplay = document.getElementById('score');
 startButton.addEventListener('click', startGame);
 nextButton.addEventListener('click', nextQuestion);
 
+/* === FUNÇÕES DO QUIZ === */
 function startGame() {
   startButton.style.display = 'none';
   quizContainer.style.display = 'block';
@@ -75,14 +108,17 @@ function selectOption(index, btn) {
   buttons.forEach(b => b.disabled = true);
 
   if (index === q.correctOption) {
-    btn.style.backgroundColor = 'green';
+    btn.style.backgroundColor = '#38b000';
+    btn.style.color = '#fff';
     score++;
   } else {
-    btn.style.backgroundColor = 'red';
-    buttons[q.correctOption].style.backgroundColor = 'green';
+    btn.style.backgroundColor = '#d62828';
+    btn.style.color = '#fff';
+    buttons[q.correctOption].style.backgroundColor = '#38b000';
+    buttons[q.correctOption].style.color = '#fff';
   }
 
-  nextButton.style.display = 'block';
+  nextButton.style.display = 'inline-block';
 }
 
 function nextQuestion() {
@@ -93,11 +129,10 @@ function nextQuestion() {
     endGame();
   }
 }
-
 function endGame() {
   quizContainer.style.display = 'none';
   scoreDisplay.style.display = 'block';
-  scoreDisplay.textContent = `Você acertou ${score} de ${allQuestions.length}!`;
-  startButton.style.display = 'block';
-  startButton.textContent = 'Jogar novamente';
+  scoreDisplay.textContent = `Você acertou ${score} de ${allQuestions.length} perguntas!`;
+  startButton.textContent = 'Jogar Novamente';
+  startButton.style.display = 'inline-block';
 }

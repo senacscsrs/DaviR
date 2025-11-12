@@ -1,0 +1,33 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #fff0f5;
+  color: #252325;
+  margin: 0;
+  padding: 0;
+}
+header, footer {
+  background: #fae1e6;
+  text-align: center;
+  padding: 1em;
+}
+#chatbox {
+  width: 90%;
+  max-width: 500px;
+  margin: 2em auto;
+  background: #fff;
+  box-shadow: 0 0 8px #d1b4cb;
+  border-radius: 8px;
+  padding: 2em;
+}
+#chatlog {
+  min-height: 100px;
+  padding-bottom: 1em;
+}
+#chat-form {
+  display: flex;
+  gap: 1em;
+}
+#user-input {
+  flex: 1;
+  padding: 0.5em;
+}
