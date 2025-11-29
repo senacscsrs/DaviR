@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Galeria de Fotos</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="/davi.png">
+
+  <style>
+    :root {
+      --primary: #000000;
+      --accent: #40413f;
+      --light: #ffffff;
+      --dark: #333;
+      --font: 'Montserrat', sans-serif;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: var(--font);
+      background: #f4f4f4;
+      color: var(--dark);
+    }
+
+    /* HEADER */
+    header {
+      background-color: var(--primary);
+      color: var(--light);
+      padding: 1rem 1rem;
+    }
+
+    .logo {
+      font-size: 1.75rem;
+      font-weight: 800;
+      letter-spacing: 1px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      margin-top: 0.5rem;
+    }
+
+    nav ul li a {
+      color: var(--light);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: var(--accent);
+    }
+
+    /* TÍTULO */
+    h1 {
+      text-align: center;
+      color: var(--primary);
+      font-size: 2.4rem;
+      margin: 2rem 0;
+    }
+
+    /* GALERIA */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      max-width: 1100px;
+      margin: auto;
+      padding: 0 1.5rem 3rem;
+    }
+
+    .photo-card {
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease-in-out;
+      cursor: pointer;
+    }
+
+    .photo-card:hover {
+      transform: scale(1.02);
+    }
+
+    .photo-card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .caption {
+      padding: 0.8rem 1rem;
+      font-size: 0.95rem;
+      text-align: center;
+      color: var(--primary);
+      font-weight: 600;
+    }
+
+    /* MODAL (foto expandida) */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 9999;
+      padding-top: 60px;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background: rgba(0, 0, 0, 0.8);
+    }
+
+    .modal-content {
+      display: block;
+      margin: auto;
+      max-width: 85%;
+      max-height: 80vh;
+      border-radius: 10px;
+    }
+
+    .close {
+      position: absolute;
+      top: 20px;
+      right: 35px;
+      color: #fff;
+      font-size: 40px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .close:hover {
+      color: #bbb;
+    }
+
+    footer {
+      background: var(--primary);
+      color: white;
+      text-align: center;
+      padding: 1.2rem;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo">Ensino Médio <strong>senac</strong></div>
+    <nav>
+      <ul>
+        <li><a href="familia.html">Início</a></li>
+        <li><a href="galeria.html">Galeria</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <h1>Minha Galeria</h1>
+
+  <!-- GALERIA -->
+  <div class="gallery">
+
+    <!-- Exemplo -->
+    <div class="photo-card">
+      <img src="/familia/fotos/foto1.jpg" alt="Foto 1">
+      <div class="caption">Familia Senac no shopping. Bruno W, Bruno B e Samuel.</div>
+    </div>
+
+    <div class="photo-card">
+      <img src="/familia/fotos/foto2.jpg" alt="Foto 2">
+      <div class="caption">Familia Rodrigues no jogo ASF. Minha tia, prima, pai e mãe.</div>
+    </div>
+
+    <div class="photo-card">
+      <img src="/familia/fotos/foto-dia-da-familia.jpg" alt="Foto 3">
+      <div class="caption">Evento da igreja. Mãe, pai, Gabi e Yanathan.</div>
+    </div>
+
+    <div class="photo-card">
+      <img src="/familia/fotos/foto-gramado.jpg" alt="Foto 4">
+      <div class="caption">Foto de nossa viagem a Petropolis.</div>
+    </div>
+
+    <div class="photo-card">
+      <img src="/familia/fotos/foto-lago-negro.jpg" alt="Foto 5">
+      <div class="caption">Aproveitando as ferias em familia em Gramado. Pai, mãe, Gabi, eu e Yanathan.</div>
+    </div>
+
+    <div class="photo-card">
+        <img src="/familia/fotos/foto-praia.jpg" alt="Foto 6">
+        <div class="caption"> Aqui também estava aproveitando as ferias, com minha mãe, irmã e pai.</div>
+    </div>
+
+    <div class="photo-card">
+        <img src="/familia/fotos/geracao-barbosa.jpg" alt="Foto 7">
+        <div class="caption"> Três geraçôes por parte da minha mãe. Ali temos minha mãe, vó, tia e irmã.</div>
+    </div>
+
+    <div class="photo-card">
+        <img src="/familia/fotos/mae-e-gabi.jpg" alt="Foto 8">
+        <div class="caption"> Minha mãe e irmã.</div>
+    </div>
+
+    <div class="photo-card">
+        <img src="/familia/fotos/pai-e-mae.jpg" alt="Foto 9">
+        <div class="caption"> Meu pai e minha mãe.</div>
+    </div>
+
+    <div class="photo-card">
+        <img src="/familia/fotos/vo-tia-mae.jpg" alt="Foto 10">
+        <div class="caption"> Minha vó, tia e mãe.</div>
+    </div>
+
+</div>
+
+  <!-- MODAL -->
+  <div id="photoModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modalImg">
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Familia Rodrigues</p>
+  </footer>
+
+
+  <!-- SCRIPT DO MODAL -->
+  <script>
+    const modal = document.getElementById("photoModal");
+    const modalImg = document.getElementById("modalImg");
+    const closeBtn = document.querySelector(".close");
+
+    document.querySelectorAll(".photo-card img").forEach(img => {
+      img.addEventListener("click", () => {
+        modal.style.display = "block";
+        modalImg.src = img.src;
+      });
+    });
+
+    closeBtn.onclick = function() {
+      modal.style.display = "none";
+    }
+
+    modal.onclick = function(e) {
+      if (e.target === modal) {
+        modal.style.display = "none";
+      }
+    }
+  </script>
+
+</body>
+</html>

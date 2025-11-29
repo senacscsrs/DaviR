@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Família Rodrigues</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="/davi.png">
+    
+  <style>
+    :root {
+      --primary: #000000;
+      --accent: #40413f;
+      --light: #ffffff;
+      --dark: #333;
+      --font: 'Montserrat', sans-serif;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: var(--font);
+      background: #f4f4f4;
+      color: var(--dark);
+    }
+
+    /* HEADER */
+    header {
+      background-color: var(--primary);
+      color: var(--light);
+      padding: 1rem 1rem;
+    }
+
+    .logo {
+      font-size: 1.75rem;
+      font-weight: 800;
+      letter-spacing: 1px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      margin-top: 0.5rem;
+    }
+
+    nav ul li a {
+      color: var(--light);
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: var(--accent);
+    }
+
+    /* BANNER */
+    .banner {
+      background: url('familia.jpg') center/cover no-repeat;
+      height: 260px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .banner::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.6);
+    }
+
+    .banner h1 {
+      position: relative;
+      color: white;
+      font-size: 2.6rem;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+      z-index: 1;
+    }
+
+    /* SECTION */
+    .section {
+      max-width: 900px;
+      margin: 2.5rem auto;
+      background: white;
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .section h2 {
+      color: var(--primary);
+      margin-bottom: 1rem;
+      font-size: 1.8rem;
+    }
+
+    .section p {
+      line-height: 1.7;
+      font-size: 1rem;
+      color: #444;
+    }
+
+    footer {
+      background: var(--primary);
+      color: white;
+      text-align: center;
+      padding: 1.2rem;
+      margin-top: 3rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo">Ensino Médio <strong>senac</strong></div>
+    <nav>
+      <ul>
+        <li><a href="familia.html">Familia</a></li>
+        <li><a href="galeria.html">Galeria</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- BANNER -->
+  <div class="banner">
+    <h1>Família Rodrigues</h1>
+  </div>
+
+  <!-- SOBRE A FAMÍLIA -->
+  <div class="section">
+    <h2>Nossa Família</h2>
+    <p>
+      A Família Rodrigues é cheia de união, carinho e histórias que moldaram quem somos hoje.
+      Cada um tem sua personalidade, seus sonhos e seu papel especial no nosso dia a dia.
+      Aqui você vai conhecer um pouco sobre cada integrante da nossa família.
+    </p>
+  </div>
+
+  <!-- PAI -->
+  <div class="section">
+    <h2>Meu Pai</h2>
+    <p>
+      Meu pai é uma das pessoas mais importantes da nossa casa. Sempre presente, sempre disposto a ajudar
+      e ensinar, ele é aquele tipo de pai que dá conselhos, puxa a orelha quando precisa e, principalmente,
+      mostra o valor de ser uma pessoa correta.  
+      Sua força e dedicação são exemplos que levamos para a vida.
+    </p>
+  </div>
+
+  <!-- MÃE -->
+  <div class="section">
+    <h2>Minha Mãe</h2>
+    <p>
+      Minha mãe é o coração da família. Carinhosa, firme quando precisa, e sempre preocupada com o bem-estar
+      de todos.  
+      Ela é aquela pessoa que mantém tudo funcionando, sempre com amor, fé e muita determinação.
+      Uma verdadeira guerreira e o maior porto seguro que a gente poderia ter.
+    </p>
+  </div>
+
+  <!-- IRMÃ -->
+  <div class="section">
+    <h2>Minha Irmã</h2>
+    <p>
+      Minha irmã traz leveza e alegria para a casa. Com seu jeito único, cheio de personalidade, 
+      humor e atitude, ela faz qualquer ambiente ficar mais vivo.  
+      É parceira para tudo e, mesmo com as briguinhas normais de irmãos, está sempre ao meu lado.
+    </p>
+  </div>
+
+  <!-- SOBRE VOCÊ -->
+  <div class="section">
+    <h2>Sobre Mim</h2>
+    <p>
+      Eu sou o Davi, estudante do Senac, apaixonado por música, tecnologia, Kings League, meus amigos
+      e meu podcast, o PodPwo.  
+      Tenho orgulho da família que eu tenho, porque foi com ela que aprendi meus valores, meu caráter
+      e a forma como vejo o mundo.  
+      Cada conquista minha tem um pedacinho de cada um deles.
+    </p>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Família Rodrigues.</p>
+  </footer>
+
+</body>
+</html>
